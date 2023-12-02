@@ -1,0 +1,207 @@
+/* || START RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || END RESET */
+
+/* START GENERAL CSS */
+
+body{
+    min-width: 100vh;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.main{
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.square{
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    background-color: blue;
+    display: grid;
+    place-content: center;
+}
+
+.square:first-child{
+    background-color: #ffff00;
+
+    
+    /* || Below code is for the  start of transformation */
+
+        /* Translate is used to move the value, translateX will move 
+        horizantally towards x axis, negative value will move left and positive value 
+        will move right */
+
+        /* transform: translateX(-2rem); */
+
+        /* Rotate will rotate the element to certain degrees */
+
+        /* transform: rotateX(180deg); */
+
+        /* scalex is used to increase or decrease the size horizontally */
+
+        /* transform: scaleX(50%); */
+
+        /* skewx will tilt by holding the x axis */
+
+        /* transform: skewX(10deg); */
+
+    /* || End of transformation */
+}
+
+.square:nth-child(2){
+    background-color: #008000;
+
+    /* || Below code is for the  start of transformation */
+        
+        /* Translate is used to move the value, translateY will move 
+        vertically towards y axis, negative value will move up and positive value 
+        will move down */
+
+        /* transform: translateY(5rem);
+
+        transform: rotateY(180deg); */
+
+        /* scaleY is used to increase or decrease the size vertically */
+
+        /* transform: scaleY(50%); */
+
+        /* skewx will tilt by holding the y axis */
+
+        /* transform: skewY(10deg); */
+
+    /* || End of transformation */
+
+     /* || Below code is for the  start of transition */
+
+
+    /* || End of transition */
+
+}
+
+.square:last-child{
+    background-color: #ff0000;
+
+    /* || Below code is for the  start of transformation */
+
+        /* Shorthand for the translate we can use to cover both x and y axis */
+
+        /* transform: translate(100%, -5rem); */
+
+        /* rotate Z will rotate the element clockwise/anticlockwise */
+        /* rotate Z and rotate both are same */
+
+        /* transform: rotateZ(78deg); */
+
+        /* scale is used to increase or decrease the size horizantally and vertically */
+
+        /* transform: scale(50%, 50%); */
+
+        /* skewx will tilt by holding the x and y axis */
+
+        /* transform: skew(-10deg, -10deg); */
+    
+    /* || End of transformation */
+
+     /* || Below code is for the  start of transition */
+
+
+    /* || End of transition */
+
+}
+
+
+ /* || Below code is for the  start of transition */
+
+.square:hover{
+    background-color: midnightblue;
+    /* The property which we want to do transition */
+    /* transition-property: background-color; */
+    /* The duration it will take for the full transition */
+    /* transition-duration: 2s; */
+    /* The delay it will take to start the transition */
+    /* transition-delay: 0.2s; */
+
+    /* It is used to make the transition in a linear or ease way */
+    /* transition-timing-function: linear; */
+
+    /* Shorthand for transition for the above mentioned property 
+    transition-property, transition-duration,  transition-timing-function,
+    transition-delay is transition */
+
+    transition: all 2s linear 0.2s;
+
+}
+
+.square:first-child:hover{
+    transform: rotate(180deg);
+}
+
+.animate {
+    /* Name of the animation */
+    animation-name: slide;
+    /* animation duration to take */
+    animation-duration:5s;
+    /* The way animation should look */
+    animation-timing-function: ease-in-out;
+    /* Animation starting point */
+    animation-delay: 1s;
+    /* Full iteration animation should perform 2  times*/
+    animation-iteration-count: 2;
+    /* animation-direction will go in normal direction if value is normal
+    It will perform in alternate direction */  
+    animation-direction: alternate;
+    
+    /* animation should go back to the bgcolor which was given at the last 100%
+    if it was given as backward then it will go back to initial state*/
+
+    animation-fill-mode: forwards;
+    
+    animation: 5s  ease-in-out 1s 2 normal
+    forwards slide;
+}
+
+/* Using the animation-name in key frames to perform the action */
+
+@keyframes slide {
+    /* In each stage what action to perform 0%, 33%, 66%, 100% */
+    
+    /* Move in the x axis */
+    0%{
+        transform: translateX(0);
+    }
+
+    /*Move in the x axis right side and rotate the element 180 degree*/
+
+    33%{
+        transform: translateX(300px) rotate(180deg);
+    }
+
+    /*Move in the x axis left side and rotate the element 180 degree*/
+
+    66%{
+        transform: translateX(-300px) rotate(-180deg);
+    }
+
+    100%{
+        transform: translateX(0);
+        background-color: paleturquoise;
+    }
+}
+/* || End of transition */
+
+/* END GENERAL CSS */

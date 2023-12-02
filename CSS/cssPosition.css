@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.5rem;
+    min-height: 200vh;
+}
+
+.outer-container {
+    border: 3px dashed #333;
+    width: 75vw;
+    height: 85vh;
+    margin: 40px auto;
+}
+
+.inner-container {
+    border: 2px solid #0000ff;
+    width: 40vw;
+    height: 50vh;
+    margin: 200px auto;
+    position: relative;
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    color: white;
+    padding: 1rem;
+}
+
+.absolute{
+    /* It will take parent element position which has relative and then position absolute 
+    will take it's position, by default it will take webpage as a reference */
+    background-color: blue;
+    position: absolute;
+    top: 0px;
+    /* To make the content visibility hidden but element should be there in dom 
+    takes up the space we can use this -1000px 
+    left: -1000px; */
+    left: 0px;
+    /* To display the content ahead of another we can use z-index */
+    z-index: 1;
+    /* To make the content disappear and element should not takes up the space then
+     we need to use display:none 
+    display: none; */
+}
+.relative{
+    /* It will take only parent container as reference like block element (div) by it all means*/
+    background-color: red;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+.fixed{
+    /* Irrespective of scrolling content will be fixed */
+    background-color: green;
+    position: fixed;
+    top: 100px;
+    left: 200px;
+}
+
+.sticky{
+    /* When you scroll the page position sticky will travel with it but when the parent
+    container disappears it will also disappear */
+    background-color: black;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+}
+

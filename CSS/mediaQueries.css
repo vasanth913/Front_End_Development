@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.5rem;
+    min-height: 100vh;
+    background-color: bisque;
+    /* background will get change circally */
+    background-image: radial-gradient(whitesmoke, bisque);
+    
+    display: flex;
+    flex-direction: column;
+}
+
+header, nav, main, footer{
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+header,footer{
+    position: sticky;
+    background-color: #808080;
+    color: whitesmoke;
+}
+
+header {
+    top: 0;
+}
+
+nav{
+    background-color: white;
+    color: beige;
+    padding: 0.5rem;
+
+}
+
+footer{
+    bottom: 0;
+}
+
+main{
+    flex-grow: 1;
+}
+
+/*syntax
+
+@media media type and (condition:brekpoint) {
+}
+
+@media screen and (min-width: 481px)
+
+min-width is used for web responsive and 481px is starting point,
+orientation: landscape/potrait can be used for mobile
+min-aspect-ratio : 16/9 is used for mobile for particular height
+
+bootstrap breakpoints:
+
+https://getbootstrap.com/docs/5.0/layout/breakpoints/
+
+Breakpoint	Class infix	 Dimensions
+X-Small	    None	        <576px
+Small	    sm	            ≥576px
+Medium	    md	            ≥768px
+Large	    lg	            ≥992px
+Extra       large xl	    ≥1200px
+Extra extra large xxl	    ≥1400px
+
+*/
+
+/* small */
+
+@media screen and (min-width: 576px){
+
+    body{
+        background-color: blueviolet;
+        background-image: radial-gradient(whitesmoke,blueviolet);
+    }
+    nav{
+        display: none;
+    }
+}
+
+/*medium*/
+
+@media screen and (min-width: 768px){
+
+    body{
+        background-color: green;
+        background-image: radial-gradient(whitesmoke,green);
+    }
+}
+
+/*Large*/
+
+@media screen and (min-width: 992px){
+
+    body{
+        background-color: red;
+        background-image: radial-gradient(whitesmoke,red);
+    }
+}
+
+/* Mobile screen landscape */
+
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4 ){
+
+    body{
+        background-color: gold;
+        background-image: radial-gradient(whitesmoke,gold);
+    }
+}

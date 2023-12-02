@@ -1,0 +1,36 @@
+body{
+    font-size: 1.5rem;
+}
+.column{
+    /* column-count: 4;
+    column-width: 200px; */
+
+    /* column-count and column width*/
+
+    columns: 4 200px;
+    column-rule: 3px solid #333;
+    column-gap: 3rem;
+}
+
+.column p {
+    margin-top: 0;
+    text-indent: 2em;
+}
+
+.column h2 {
+    background-color: black;
+    color: white;
+    padding: 3rem;
+    break-inside: avoid;
+}
+
+.column .quote{
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 3rem;
+    column-span: all;
+}
+
+.nowrap{
+   white-space: nowrap;
+}

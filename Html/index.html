@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Vasanth">
+    <meta name="description" content="Front End Developer">
+    <title>
+        My First Page
+    </title>
+    <!-- To display icon in the tab after the main title -->
+    <link rel="icon" href="images/random.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+</head>
+<!-- Html Cheatsheet link for proper coding in html https://learntheweb.courses/topics/html-semantics-cheat-sheet/-->
+
+<body>
+    <header>
+        <h1>Hello World!</h1>
+        <hr>
+        <!-- To navigate internally using sections, we must use nav and sections  -->
+        <nav aria-labelledby="primary-navigation">
+            <h2 id="primary-navigation"> Primary </h2>
+            <ul>
+                <li>
+                    <a href="#ch3"> Chapter 3 </a>
+                </li>
+                <li>
+                    <a href="#ch5"> Chapter 5 </a>
+                </li>
+                <li>
+                    <a href="#contact"> Contact Details </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h2> Story of Front End Developer</h2>
+            <p>Hey, <em> I will become <strong>Front end developer. </strong> </em> <br> &nbsp; &nbsp; &nbsp; ... Vasanth</p>
+            <figure>
+                <figcaption>Code Snippet</figcaption>
+                <code>&lt;h1&gt; Hello World! &lt;/h1&gt;</code>
+            </figure>
+            <figure>
+                <img src="images/FrontEndDeveloper.jpg" alt="Front End Developer" title="Front End Developer" width="640"
+                height="350">
+                <figcaption> Front End Developer </figcaption>
+            </figure>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <figure>
+                <img src="images/tesla.jpg" alt="Tesla" title="Tesla" width="640" height="350" loading="lazy">
+                <figcaption> Tesla </figcaption>
+            </figure>
+
+            <!-- shift+alt+down arrow to copy and paste contents -->
+            <section id="ch3">
+                <h2>I was in chapter 3</h2>
+                <p>Text Basics</p>
+            </section>
+            <section>
+                <h2>Link Pages</h2>
+                <p><a href="todayTask.html"> Task List display </a></p>
+                <hr>
+                <p><a href="properHtmlCodeFormatForExample.html"> Proper Html Code </a></p>
+            </section>
+            <section>
+                <h3>Outcome</h3>
+                <p>Achievement as a Front End Developer</p>
+                <aside>
+                    <details>
+                        <summary>Guess the <mark>number of hours</mark> I code per day</summary>
+                        <p>I start at <time datetime="08:00">8 am</time> and I write code for <time datetime="PT3H">3
+                                hours</time> every morning.</p>
+                    </details>
+                </aside>
+            </section>
+            <br>
+            <table>
+                <caption> My Daily Schedule </caption>
+                <thead>
+                    <tr>
+                        <th> &nbsp; </th>
+                        <th scope="col">
+                            Time
+                        </th>
+                        <th scope="col">
+                            Activity
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"> Morning </th>
+                        <td>
+                        <time datetime="06:00"> 6 am </time> -
+                        <time datetime="08:00"> 8 am </time>
+                        </td>
+                        <td> Write Code</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"> Afternoon </th>
+                        <td>
+                        <time datetime="01:00"> 1 pm </time> -
+                        <time datetime="02:30"> 2.30 pm </time>
+                        </td>
+                        <td> Lunch Break</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"> Evening chai </th>
+                        <td>
+                        <time datetime="05:00"> 5 pm </time> -
+                        <time datetime="05:30"> 5.30 pm </time>
+                        </td>
+                        <td> Coffee Break</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Free Time</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"> Evening </th>
+                        <td rowspan="2">All Other Activity</td>
+                        <td>Playing </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"> Night </th>
+                        <td> Sleeping </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">
+                            Eat,Sleep,code repeat
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+            <!-- Ordered List -->
+            <ol>
+                <li>Learn AI</li>
+                <li>Learn Blockchain</li>
+                <li>Learn Stock Market</li>
+            </ol>
+            <!-- Unordered List -->
+            <ul>
+                <li>Learn AI</li>
+                <li>Learn Blockchain</li>
+                <li>Learn Stock Market</li>
+            </ul>
+            <!-- Description List -->
+            <dl>
+                <dt>Learn AI</dt>
+                <dd>Cutting Edge Technology</dd>
+                <dt>Learn Blockchain</dt>
+                <dd>Distributed Ledger Technology</dd>
+                <dt>Learn Stock Market</dt>
+                <dd><a href="https://www.youtube.com/watch?v=47rxUMV-Fqk">Subject to Market Risk</a></dd>
+            </dl>
+            <section id="ch5">
+                <h2>I am in chapter 5</h2>
+                <p>Internal Navigation</p>
+            </section>
+            <address>Puducherry</address>
+            <p>I learn from <abbr title="Mozilla Developer Network"><a
+                        href="https://developer.mozilla.org/en-US/">MDN</a></abbr> resources</p>
+            <hr>
+        </article>
+        <hr>
+        <article id="contact">
+            <h2>Contact Details</h2>
+            <p>I would like to hear from you </p>
+            <form action="https://httpbin.org/get" method="get">
+                <fieldset>
+                    <legend> Personal Info </legend>
+                    <p>
+                        <label for="firstName">First Name</label>
+                        <input type="text" name="firstName" id="firstName" placeholder="First Name" autocomplete="on" autofocus required>
+                    </p>
+                    <p>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="Password"  required>
+                    </p>
+                    <p>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" name="phone" id="phone" placeholder="Phone Number"  required
+                        pattern="[0-9]{3} [0-9]{3} [0-9]{4}">
+                    </p>
+                    <p>
+                        <label for="decade">Favorite Decade</label>
+                        <input type="number" name="decade" id="decade" placeholder="Decade" min="1950"
+                        max="2020" value="1980" step="10" >
+                    </p>
+                    <p>
+                        <label for="content">Fav Content</label>
+                        <select name="content" id="content" multiple size="5">
+                            <optgroup label="Web Development">
+                                <option value="frontEnd"> Frontend </option>
+                                <option value="backEnd"> Backend </option>
+                                <option value="fullStack"> Fullstack </option>
+                            </optgroup>
+                            <optgroup label="Cutting Edge Technology">
+                                <option value="artificialIntelligence" selected> Artificial Intelligence </option>
+                                <option value="blockchain"> BlockChain </option>
+                                <option value="machineLearning"> Machine Learning </option>
+                            </optgroup>
+                        </select>
+                    </p>
+                    <!-- <p>
+                        <label for="content">Fav Content</label>
+                        <input type="text" name="content" id="content" list="content-list">
+                        <datalist id="content-list">
+                                <option value="frontEnd">
+                                <option value="backEnd">
+                                <option value="fullStack">
+                                <option value="artificialIntelligence" selected>
+                                <option value="blockchain"> 
+                                <option value="machineLearning">
+                        </datalist>
+                    </p> -->
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Your Favorite Food
+                    </legend>
+                    <p>
+                        <input type="radio" name="food" value="chicken" id="chicken">
+                        <label for="chicken">Chicken</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="food" value="mutton" id="mutton">
+                        <label for="mutton">Mutton</label>
+                    </p>
+                    <p>
+                        <input type="radio" name="food" value="others" id="others">
+                        <label for="others">Others</label>
+                    </p>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>
+                        Your Favorite Pet
+                    </legend>
+                    <p>
+                        <input type="checkbox" name="pet" value="Dog" id="Dog">
+                        <label for="Dog">Dog</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" name="pet" value="cat" id="cat">
+                        <label for="cat">Cat</label>
+                    </p>
+                    <p>
+                        <input type="checkbox" name="pet" value="parrot" id="parrot">
+                        <label for="parrot">Parrot</label>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Send me a note
+                    </legend>
+                    <label for="message"> Your Message</label>
+                    <p>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here"></textarea>
+                    </p>
+                </fieldset>
+                <br><br>
+                <button type="submit"> Submit </button>
+                <button type="submit" formaction="https://httpbin.org/post" formmethod="post"> Post </button>
+                <button type="reset"> Reset </button>
+            </form>
+        </article>
+    </main>
+    <footer>
+        <!-- Html entities where we can use less than greater than copyrights -->
+        <p>&lt; &copy; &gt;  Vasanth Ravichandiran Html Page</p>
+        <!-- You can learn html elements and attributes in Mozilla Developer network (MDN)-->
+        <hr>
+        <p><a href="#"> Back to Top</a></p>
+    </footer>
+</body>
+
+</html>

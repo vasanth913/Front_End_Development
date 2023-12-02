@@ -1,0 +1,188 @@
+/* Begin Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+}
+
+/* End Reset */
+
+/*  Begin utility classes */
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.offscreen{
+    position: absolute;
+    left: -1000px;
+}
+
+/* End utility classes */
+
+body{
+    min-height: 100vh;
+
+    /* background styles like background-color,
+    background-image, background-repeat, background-position,
+    background-size in the Page below for reference */
+
+    background-color: bisque;
+
+    /* If you want to transform the color in the page we can use background 
+    image linear gradient for look and feel */
+
+    /* background-image: linear-gradient(steelblue, pink, white,black); */
+
+    /* We can also set the direction which color should get started 
+    default is to bottom*/
+
+    /* background-image: url(images/bubbles.png),
+    linear-gradient(to left,  steelblue, pink, white,black); */
+   
+    /*  repeat-y for url and no-repeat for linear gradient */
+
+    /* background-repeat: repeat-y, no-repeat;
+
+    background-position: left;
+
+    background-size: 5% , auto; */
+
+
+    /* One shorthand command to use the background for all the above one
+    like background-repeat, background-poisition, background-url expect background-size*/
+    
+    background: repeat-y left url(images/bubbles.png), no-repeat linear-gradient(to left,  steelblue, pink, white,black) ;
+
+    background-size: 5% , auto;
+
+}
+
+.container{
+
+    background-color: bisque;
+
+    /* To display the background image */
+
+    background-image: url(images/pattern2.jpg);
+    /* background-repeat: repeat; */
+    background-size: cover;
+
+    /* if you don't want the background image to get repeated, you can use no repeat */
+    
+    background-repeat: no-repeat;
+
+    /* We can also make it with respect to x-axis and y-axis for repeat */
+
+    /* background-repeat: repeat-x; */
+
+    /* if you want to show only bottom of the background image then you can
+    use background position */
+
+    /* we can adjust top, bottom, center, bottom  left, top right */
+
+    /*background-position: bottom right */
+
+    background-position: center;
+
+    
+}
+
+.hero {
+    border-bottom: 2px solid black;
+    padding: 20px;
+
+    /* start: To display the image and the text side by side like 
+    profile pic and name */
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+
+         /* End: To display the image and the text side by side like 
+    profile pic and name */
+
+    background-color: hsla(0, 0%, 0%, 0.311);
+
+}
+
+h1{
+    font-size: 400%;
+    
+    color: white;
+
+    /* text shadow will make the text little more visible x-axis 
+    y axis blur color*/
+    text-shadow: 2px 2px 5px black;
+
+    /* we can use the padding and border radius while using the 
+    transparent background color 
+
+    background-color: hsla(0, 0%, 0%, 0.311);
+    padding: 2rem;
+    border-radius: 20px;
+    */
+}
+
+.profile-pic{
+    width: 35%;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    border: 5px double green;
+    border-radius: 50%;
+}
+
+.clip{
+    font-weight: 800;
+    font-size: 10rem;
+    text-align: center;
+    background-image: url(images/garden.jpg);
+    background-size: 100%;
+
+    /* To apply the background color for the text we can use background-clip
+    and color transparent */
+
+    /* In order to check whether background-clip supported or not you can use
+    caniuse.com */
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    /* Either we can use hsla to transparent or color transparent */
+
+    /* color: hsla(0, 0%, 0%, 0.091); */
+
+    color: transparent;
+
+    background-position: center;
+}
+
+/* Previous example css used in html for CSS Image Style 
+
+.example{
+    margin-top: 1rem;
+    padding-left: 20px;
+    border: 1px solid red;
+}
+
+.example img {
+
+    /* Always provide the width and height for the images it's a standard practice */
+
+    /* Giving width in percentage and height as auto will make the image responsive */
+    
+    /* width: 25%;
+    height: auto;
+} */
+

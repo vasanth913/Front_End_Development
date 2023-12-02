@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+html{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #4800ff
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    padding: 10%;
+}
+
+input,button {
+    /* To inherit the font-size from body we must use font-size: inherit */
+    font-size: inherit;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+p span {
+    display: inline-block;
+    background-color: antiquewhite;
+    margin-top: 10px;
+    padding: 4rem;
+    height: 100px
+}
+
+dd{
+    text-indent: 2em;
+    line-height: 1.4em;
+
+    /* This can be used for showing some special effects in text letter spacing
+    and word spacing. For normal scenerio not much used */
+
+    /* letter-spacing: 0.5em;
+    word-spacing: 2em; */
+}
+
+h1, h2 {
+    color:black;
+    font-size: 1rem;
+    padding: 0.5em;
+    text-decoration:underline;
+}
+
+.container{
+    color:black;
+
+    border: 2px double red;
+
+    /* border: 1px dashed red;
+    border-top-color: green;
+    border-top-width: 10px; 
+    border-right: 2px solid red;
+    */
+
+    /* width and height is advisable to use percentage */
+
+    width: 100%;
+
+    /* font-size should be used in rem*/
+
+    font-size: 1.5rem;
+
+    /* margin-top: 0.5em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    margin-bottom: 2em; */
+
+    /* Margin and passing should be used in em units rem --> em */
+
+    margin: 1.5em 0.5em 0.5em 1.5em;
+
+    /* If top and right have same values you can use one value, 
+    similarly bottom and left has same values we can use one value*/
+
+    padding: 0.5em 0.5em;
+
+    outline: 2px double green;
+
+    outline-offset: 5px;
+}
+
+.circle{
+    border: 2px solid red;
+
+    width: 100px;
+    height:100px;
+
+    /* It is used to make the border curved/circle type  edges */
+    
+    border-radius: 50%;
+
+    background-color: yellow;
+
+    /* To make margin to have equal height width top,bottom,right,left use auto*/
+    margin: 1.5em auto;
+
+    /*outline doesn't occupy the space like border*/
+
+    outline: 5px dashed green;
+    outline-offset: 10px;
+}
+
+.passion {
+    color: green;
+}
+
+#achievement {
+    color: brown;
+}
+
+
+a{
+    text-decoration: none;
+    /* pointer-events: none;
+    cursor:not-allowed; */
+    color: rgb(166, 43, 43);
+}
+
+/* a:visited{
+    color: blue;
+} */
+
+/* a:hover {
+    color:rgba(166, 43, 43, 0.5);
+} */
+
+/* with Opacity another way of applying transparency*/
+a:hover {
+    color:rgb(166, 43, 43);
+    opacity:0.5;
+}
+
+a:focus{
+    color: rgba(166, 43, 43, 0.5);
+    background-color: white;
+}
+
+a:active{
+    color: red;
+}
+
+ol{
+    padding-left: 10em;
+    list-style-type: upper-roman;
+    /* disc will make ordered list to unordered list like bulletin
+        list-style-type: disc;
+    */
+}
+
+ul{
+    padding: 1.5em 1.5em;
+    /* list-style-type: circle; */
+    text-align: center;
+    /*It will align the position of the list icon with the text*/
+    /* list-style-position: inside; */
+
+    /*To apply the image for the list
+    list-style-image: url(../CSS/images/tick-icon.jpg);*/
+
+    /* disc will make ordered list to unordered list like bulletin
+        list-style-type: disc;
+    */
+
+    /*short form for list-style*/
+
+    list-style: circle inside;
+}
+
+ul li:nth-child(2){
+    color: brown;
+}
+
+ol li:nth-child(1){
+    color: hotpink;
+}
+
+ol li::marker{
+    color: cadetblue;
+    font-size: 1em;
+    content: "Subscribe >>";
+}
+
+/*CSS Float*/
+
+.block {
+    background-color: black;
+    color: azure;
+    width: 30vw;
+    height: 30vw;
+    padding: 1rem;
+}
+
+.left{
+    float: left;
+    margin-right: 2rem;
+}
+
+.clear{
+    clear: both;
+}
+
+.sectionCss{
+    background-color: aliceblue;
+    border: 2px solid black;
+    padding: 1rem;
+    display: flow-root;
+}

@@ -1,0 +1,63 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 1rem;
+}
+
+section{
+    height: 100vh;
+}
+.blue{
+    background-color: blue;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+header {
+    color: whitesmoke;
+    text-align: center;
+    height: 80px;
+    padding: 1rem;
+}
+
+header{
+    position: sticky;
+    font-size: 4rem;
+    top: 0;
+}
+footer{
+    background-color: aqua;
+    position: fixed;
+    font-size: 2rem;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+
+    /* To apply full width of the page we can use 'position: sticky'
+    instead of width 100% (other way around)*/
+}
+
+a {
+    color: azure;
+}
+
+.submitButton {
+    background-color: burlywood;
+    font-size: inherit;
+    color:black;
+    position: fixed;
+    top: 30%;
+}
+
+.resetButton {
+    background-color: burlywood;
+    font-size: inherit;
+    color:blueviolet;
+    position: fixed;
+    top: 50%;
+}

@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container{
+    max-width: 800px;
+    min-height: 400px;
+    margin-inline: auto;
+    border: 2px solid red;
+    display: flex;
+
+    /* Below justify-content properties are used to align the column horizontally */
+
+    
+    justify-content: center;
+
+    /* will give space between the elements equally and also space at the start and end
+        justify-content: space-around;
+    */
+    /* will give space between the elements equally and won't leave space at the start and end
+        justify-content: space-between;
+    */
+    /* It will split the space evenly for all the elements*/
+    /* justify-content: space-evenly; */
+
+    /* Below align properties are used to align the rows vertically */
+
+     align-items: center;
+
+     gap: 1rem;
+
+    /* We can also set flex-direction in what direction it need to get applied 
+
+    flex-direction: row; */
+
+    /* flex wrap will make the elements wrap to make it responsive
+
+    flex-wrap: wrap; */
+
+    /* flex flow will combine both flex-direction and flex-wrap together */
+
+    /* nowrap for testing purpose of flex;shrink*/
+
+    flex-flow: row nowrap;
+
+    /* align content can able to align the contents */
+
+    align-content: space-evenly;
+
+
+
+}
+
+.box{
+    /* min-width: 100px; */
+    height: 100px;
+    background-color: black;
+    color: aliceblue;
+    font-size: 2rem;
+    padding: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* To adjust the individual elements we can use flex basis and other flex paramters */
+    
+    /*flex-basis will act as min-width */
+    
+    /* flex-basis: 100px; */
+
+    /*flex-grow will grow depending upon the contents */
+
+    /* flex-grow: 1;   */
+    
+     /*flex-shrink will grow depending upon the contents */
+
+    /* flex-shrink : 1 */
+
+    /* Using single element as flex, we can use flex grow, shrink and basis in this order */
+
+     flex: 1 1 200px;
+}
+
+/* we can individually adjust the box elements by using the nth child */
+
+.box:nth-child(2){
+    /* flex-grow: 2; */
+
+    /* flex-shrink: 2; */
+
+    flex: 2 2 200px;
+
+    /* To change the order of the element to number 1, we can use order property*/
+    
+    /*order:2 will make the element to display at the last*/
+
+    order:-1
+}

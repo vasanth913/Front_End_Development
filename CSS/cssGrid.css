@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+
+    /* Named Grid item & Grid Template Area setup */
+
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-auto-rows: 50px auto 50px;
+    grid-template-areas: 
+    "hd hd hd hd hd hd hd hd hd"
+    "mn mn mn mn mn mn mn sd sd"
+    "ft ft ft ft ft ft ft ft ft";
+}
+
+.el{
+    display: grid;
+    background-color: blueviolet;
+    place-content: center;
+    color: aliceblue;
+}
+
+.header{
+    
+    /* We can use the name of the grid-template-area like hd to use the grid */
+
+    grid-area: hd;
+}
+
+.sidebar{
+    grid-area: sd;
+}
+
+.footer{
+    grid-area: ft;
+}
+
+.header{
+    display: grid;
+    background-color: blueviolet;
+    place-content: center;
+    color: aliceblue;
+}
+
+.container{
+
+    grid-area: mn;
+    
+    display: grid;
+
+    min-height: 400px;
+
+    /* min-width: 800px; */
+
+    /* To make all the rows into columns */
+
+    /* grid-auto-flow:column; */
+
+    /* grid-template-columns: 2fr  1fr  2fr; */
+
+    /*If you want to make all 4 columns with equal size you can use repeat */
+
+    /* grid-template-columns: repeat(4, 1fr); */
+
+    /*If you want to make it as a pattern with 2fr for 1st column, 1fr for 2nd column
+    similarly 2fr for 3rd column, 1fr for 4th column and to be continued*/
+
+    /* grid-template-columns: repeat(4, 2fr 1fr); */
+
+    /*We can also give like this 200px, 2fr 1 fr and it will split the columns accordingly*/
+
+    grid-template-columns: 200px 2fr 1fr; 
+
+    /* For rows we can set using grid-auto-rows using minmax value*/
+
+    grid-auto-rows: minmax(100px, auto); 
+
+    /*We can also use replica grid-template-rows and grid-auto-columns*/
+
+    /* grid-template-rows: repeat(4, 1fr 2fr);
+
+    grid-auto-columns: minmax(100px, auto); */
+
+    /* We can use row and column gap to provide the gap between the row and columns */
+
+    /* row-gap: 1em;
+
+    column-gap: 1em; */
+
+    /* if you want to give same gap for both rows and columns then
+     you can use only gap with one value and if both values are different then first will take as
+     row and next as column*/
+
+    gap: 1em 2em;
+
+}
+
+.box{
+    background-color: black;
+    color: aliceblue;
+    font-size: 2rem;
+    padding: 0.5rem
+}
+
+.box:first-child{
+    background-color: blue;
+
+    /* we can individually adjust the rows and columns using grid-column-start end
+    and grid-rows-start and end */
+
+    /* To understand more how it got applied in page go to inspect -> layout ->
+    checked the main container and see the grid changes*/
+
+    /* grid-column-start: 1;
+    grid-column-end: 4;
+    
+      grid-row-start: 1;
+      grid-row-end: 3;
+
+    */
+
+    /* Shorthand to apply grid column we can use grid column separated by /  
+    for the above one*/
+
+    grid-column: 1 / 4;
+
+    /* Shorthand to apply grid row we can use grid column separated by /  
+    for the above one*/
+
+    grid-row: 1 / 2;
+
+    
+
+    display: grid;
+
+    /* There is one shorthand to use both align-content and justify-content
+    and it is place-content */
+
+    /* align-content: center;
+    justify-content: center; */
+
+    place-content: center;
+}
+
+.box:nth-child(2){
+    background-color: brown;
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+}
