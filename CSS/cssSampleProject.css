@@ -1,0 +1,45 @@
+/* || RESET CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*GENERAL CSS */
+
+body{
+    min-height: 100 vh;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.header{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    gap: 5rem;
+    width: 100%;
+    background-color: bisque;
+}
+
+.header h1{
+    margin: 0.5rem;
+}
+
+.header__nav ul{
+    list-style-type: none;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    gap: 5rem;
+    padding: 1rem;
+}
+
+.selectCSS{
+    border: 0px;
+    outline: 0px;
+    background-color: bisque;
+}
+

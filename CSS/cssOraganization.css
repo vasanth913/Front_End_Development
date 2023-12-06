@@ -1,0 +1,76 @@
+/* Famous Naming Convention to follow BEM (Block Level Modifier) */
+
+/* Rules to Follow 
+
+1. First we need to follow the naming Conventions used by the team if not so 
+we can follow BEM standards
+
+2. Comments are very important because it will segregate into different topis like
+|| RESET */
+/* || VARIABLES
+
+3. Sort ascending the css, select the CSS elements inside the class and then press 
+ctrl + P and then give the text "Sort Lines ascending"
+
+[It is one of the way to organize the code]
+[It will also help out to remove the duplicates]
+
+4. Use Html code and CSS code validation to validate the code
+
+5. Block Level Modifier (BEM) will be more useful for the large projects
+
+aka components --> Also known as (aka) component blocks are also known as components 
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* || RESET CLASS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || UTILITY CLASS */
+
+.nowrap{
+    white-space: nowrap;
+}
+
+/* || GENERAL CSS */
+
+/* BLOCKS */
+
+/* .btn{
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+} */
+
+/* BLOCKS WITH MODIFIERS */
+
+/* .btn--secondary{
+    background-color: yellow;
+}
+
+.btn--lean{
+    transform: skewX(-10deg);
+} */
+
+/* ELEMENTS WITH MODIFIERS */
+
+.header__btn{
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+}
+
+.header__btn--secondary{
+    background-color: yellow;
+}
+
+.header__btn--lean{
+    transform: skewX(-10deg);
+}
