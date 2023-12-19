@@ -1,0 +1,28 @@
+/*Reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.main{
+    display: flex;
+    flex-grow: 1;
+}
+
+.container{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+

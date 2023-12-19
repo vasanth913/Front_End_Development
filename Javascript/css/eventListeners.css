@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+}
+
+nav{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    min-width: 100px;
+    padding: 5px 5px;
+}
+
+.darkblue{
+    background-color: darkblue;
+}
+
+.purple{
+    background-color: purple;
+}
+
+.green{
+    background-color: green;
+}
+
+.black{
+    background-color: black;
+}
+
+.height100{
+    height: 100px;
+}
+
+.height900{
+    height: 900px;
+}
+
+section{
+
+    background-color: darkblue;
+    flex-grow: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 500px;
+    min-height: 500px;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    width: 150px;
+    height: 150px;
+}
